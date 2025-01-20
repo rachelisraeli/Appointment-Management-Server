@@ -92,7 +92,7 @@ The server will run at `http://localhost:5000` by default.
 ### Business details
 
    #### Get the business details
-      - `GET  /api/business`
+   - `GET  /api/business`
       
 
    #### Add business details
@@ -111,7 +111,7 @@ The server will run at `http://localhost:5000` by default.
       ```
 
    #### Update the business details
-      - `PUT  /api/business`
+   - `PUT  /api/business`
 
 ### Services Routes
 
