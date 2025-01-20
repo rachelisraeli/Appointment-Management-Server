@@ -22,7 +22,9 @@ This project is a backend server for managing appointments, services, and busine
 
 ### Prerequisites
 1. Install [Node.js](https://nodejs.org/).
+   
 2. Install [MongoDB](https://www.mongodb.com/) and ensure it is running locally or have access to a MongoDB Atlas instance.
+
 3. Create a `.env` file in the root directory with the following variables:
 
 ```env
@@ -35,14 +37,17 @@ MONGO_URI=your_mongo_connection_string
    ```bash
    git clone https://github.com/rachelisraeli/Appointment-Management-Server.git
    ```
+   
 2. Navigate to the project directory:
    ```bash
    cd Appointment-Management-Server
    ```
+   
 3. Install dependencies:
    ```bash
    npm install
    ```
+   
 4. Start the server:
    ```bash
    npm start
@@ -63,7 +68,6 @@ The server will run at `http://localhost:5000` by default.
 | GET    | `/api/business`    | Get business details            |
 | POST   | `/api/business`    | Add business details            |
 | PUT    | `/api/business/:id`| Update business details by ID   |
-| DELETE | `/api/business/:id`| Delete business details by ID   |
 
 ### Service Routes
 | Method | Endpoint           | Description                     |
@@ -82,23 +86,3 @@ The server will run at `http://localhost:5000` by default.
 | POST   | `/api/meetings`    | Add a new meeting               |
 | PUT    | `/api/meetings/:id`| Update a meeting by ID          |
 | DELETE | `/api/meetings/:id`| Delete a meeting by ID          |
-
-
-## How to Contribute
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Description of changes"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
