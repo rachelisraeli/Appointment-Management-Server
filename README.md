@@ -93,10 +93,12 @@ The server will run at `http://localhost:5000` by default.
 
    #### Get the business details
       - `GET  /api/business`
-   - **Request Body**:
+      
 
    #### Add business details
-      - `POST  /api/business`
+   
+   - `POST  /api/business`
+   - **Request Body**:
 
       ```json
         {
