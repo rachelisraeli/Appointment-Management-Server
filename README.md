@@ -62,12 +62,14 @@ The server will run at `http://localhost:5000` by default.
 #### Register a New User
 - `POST  /api/auth/register`
 - **Request Body**:
+  
   ```json
   {
     "username": "string",
     "password": "string"
   }
   ```
+  
 - **Response**:
   - **201 Created**: Successfully registered.
   - **400 Bad Request**: Validation error.
@@ -75,26 +77,39 @@ The server will run at `http://localhost:5000` by default.
 #### User Login
 - `POST  /api/auth/login`
 - **Request Body**:
+  
   ```json
   {
     "username": "string",
     "password": "string"
   }
   ```
+  
 - **Response**:
   - **200 OK**: Successfully logged in with a JWT token.
   - **401 Unauthorized**: Invalid credentials.
 
 ### Business details
 
-#### Get the business details
-- `GET  /api/business`
+   #### Get the business details
+      - `GET  /api/business`
+   - **Request Body**:
 
-#### Add business details
-- `POST  /api/business`
+   #### Add business details
+      - `POST  /api/business`
 
-#### Update the business details
-- `PUT  /api/business`
+      ```json
+        {
+          "name": "string",
+          "address": "string",
+          "phone": "string",
+          "owner": "string",
+          "description: "string"
+        }
+      ```
+
+   #### Update the business details
+      - `PUT  /api/business`
 
 ### Services Routes
 
@@ -107,6 +122,7 @@ The server will run at `http://localhost:5000` by default.
 #### Add a New Service
 - `POST  /api/services`
 - **Request Body**:
+  
   ```json
   {
     "name": "string",
@@ -133,6 +149,7 @@ The server will run at `http://localhost:5000` by default.
 #### Add a New Meeting
 - `POST  /api/meetings`
 - **Request Body**:
+  
   ```json
   {
     "name": "string",
