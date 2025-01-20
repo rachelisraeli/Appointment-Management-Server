@@ -60,8 +60,7 @@ The server will run at `http://localhost:5000` by default.
 ### Authentication Routes
 
 #### Register a New User
-- **URL**: `/api/auth/register`
-- **Method**: `POST`
+- `POST /api/auth/register`
 - **Description**: Registers a new user.
 - **Request Body**:
   ```json
@@ -128,6 +127,16 @@ The server will run at `http://localhost:5000` by default.
 
 ### Meetings Routes
 
+#### Get All Meetings
+- **URL**: `/api/meetings`
+- **Method**: `GET`
+- **Description**: Fetches all meetings.
+
+#### Get Meeting by ID
+- **URL**: `/api/meetings/:id`
+- **Method**: `GET`
+- **Description**: Fetches a meeting by its ID.
+
 #### Add a New Meeting
 - **URL**: `/api/meetings`
 - **Method**: `POST`
@@ -141,6 +150,18 @@ The server will run at `http://localhost:5000` by default.
     "meetingDuration": "Date"
   }
   ```
+
+#### Update a Meeting
+- **URL**: `/api/meetings/:id`
+- **Method**: `PUT`
+- **Description**: Updates an existing meeting.
+- **Request Body**: Similar to adding a new meeting.
+
+#### Delete a Meetinh
+- **URL**: `/api/meetings/:id`
+- **Method**: `DELETE`
+- **Description**: Deletes a meeting by its ID.
+
 
 #### Error Handling
 In case of any errors, the server will respond with appropriate HTTP status codes and error messages.
