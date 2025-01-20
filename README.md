@@ -106,7 +106,7 @@ The server will run at `http://localhost:5000` by default.
           "address": "string",
           "phone": "string",
           "owner": "string",
-          "description: "string"
+          "description": "string"
         }
       ```
 
