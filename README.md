@@ -60,8 +60,7 @@ The server will run at `http://localhost:5000` by default.
 ### Authentication Routes
 
 #### Register a New User
-- `POST /api/auth/register`
-- **Description**: Registers a new user.
+- `POST  /api/auth/register`
 - **Request Body**:
   ```json
   {
@@ -74,9 +73,7 @@ The server will run at `http://localhost:5000` by default.
   - **400 Bad Request**: Validation error.
 
 #### User Login
-- **URL**: `/api/auth/login`
-- **Method**: `POST`
-- **Description**: Logs in a user.
+- `POST  /api/auth/login`
 - **Request Body**:
   ```json
   {
@@ -88,22 +85,27 @@ The server will run at `http://localhost:5000` by default.
   - **200 OK**: Successfully logged in with a JWT token.
   - **401 Unauthorized**: Invalid credentials.
 
+### Business details
+
+#### Get the business details
+- `GET  /api/business`
+
+#### Add business details
+- `POST  /api/business`
+
+#### Update the business details
+- `PUT  /api/business`
+
 ### Services Routes
 
 #### Get All Services
-- **URL**: `/api/services`
-- **Method**: `GET`
-- **Description**: Fetches all services.
-
+- `GET  /api/services`
+  
 #### Get Service by ID
-- **URL**: `/api/services/:id`
-- **Method**: `GET`
-- **Description**: Fetches a service by its ID.
+- `GET  /api/services/:id`
 
 #### Add a New Service
-- **URL**: `/api/services`
-- **Method**: `POST`
-- **Description**: Adds a new service.
+- `POST  /api/services`
 - **Request Body**:
   ```json
   {
@@ -115,32 +117,21 @@ The server will run at `http://localhost:5000` by default.
   ```
 
 #### Update a Service
-- **URL**: `/api/services/:id`
-- **Method**: `PUT`
-- **Description**: Updates an existing service.
-- **Request Body**: Similar to adding a new service.
+- `PUT  /api/services/:id`
 
 #### Delete a Service
-- **URL**: `/api/services/:id`
-- **Method**: `DELETE`
-- **Description**: Deletes a service by its ID.
+- `DELETE  /api/services/:id`
 
 ### Meetings Routes
 
 #### Get All Meetings
-- **URL**: `/api/meetings`
-- **Method**: `GET`
-- **Description**: Fetches all meetings.
+- `GET  /api/meetings`
 
 #### Get Meeting by ID
-- **URL**: `/api/meetings/:id`
-- **Method**: `GET`
-- **Description**: Fetches a meeting by its ID.
+- `GET  /api/meetings/:id`
 
 #### Add a New Meeting
-- **URL**: `/api/meetings`
-- **Method**: `POST`
-- **Description**: Adds a new meeting.
+- `POST  /api/meetings`
 - **Request Body**:
   ```json
   {
@@ -152,16 +143,11 @@ The server will run at `http://localhost:5000` by default.
   ```
 
 #### Update a Meeting
-- **URL**: `/api/meetings/:id`
-- **Method**: `PUT`
-- **Description**: Updates an existing meeting.
+- `PUT  /api/meetings/:id`
 - **Request Body**: Similar to adding a new meeting.
 
 #### Delete a Meetinh
-- **URL**: `/api/meetings/:id`
-- **Method**: `DELETE`
-- **Description**: Deletes a meeting by its ID.
-
+- `DELETE  /api/meetings/:id`
 
 #### Error Handling
 In case of any errors, the server will respond with appropriate HTTP status codes and error messages.
