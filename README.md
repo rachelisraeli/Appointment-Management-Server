@@ -83,25 +83,6 @@ The server will run at `http://localhost:5000` by default.
 | PUT    | `/api/meetings/:id`| Update a meeting by ID          |
 | DELETE | `/api/meetings/:id`| Delete a meeting by ID          |
 
-## Folder Structure
-```plaintext
-Appointment-Management-Server/
-├── config/
-│   └── db.js          # Database connection setup
-├── controllers/
-│   └── servicesController.js # Logic for handling services
-├── models/
-│   └── servicesSchema.js     # Mongoose schema for services
-├── routes/
-│   ├── authRoute.js     # Authentication routes
-│   ├── businessRoute.js # Business-related routes
-│   ├── servicesRoute.js # Service-related routes
-│   └── meetingsRoute.js # Meeting-related routes
-├── .env              # Environment variables (not committed to Git)
-├── .gitignore        # Ignored files for Git
-├── package.json      # Project metadata and dependencies
-├── server.js         # Main server file
-```
 
 ## How to Contribute
 1. Fork the repository.
