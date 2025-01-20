@@ -57,32 +57,91 @@ The server will run at `http://localhost:5000` by default.
 
 ## API Endpoints
 
-### Auth Routes
-| Method | Endpoint       | Description              |
-|--------|----------------|--------------------------|
-| POST   | `/api/auth`    | User authentication      |
+### Authentication Routes
 
-### Business Routes
-| Method | Endpoint           | Description                     |
-|--------|--------------------|---------------------------------|
-| GET    | `/api/business`    | Get business details            |
-| POST   | `/api/business`    | Add business details            |
-| PUT    | `/api/business/:id`| Update business details by ID   |
+#### Register a New User
+- **URL**: `/api/auth/register`
+- **Method**: `POST`
+- **Description**: Registers a new user.
+- **Request Body**:
+  ```json
+  {
+    "username": "string",
+    "password": "string"
+  }
+  ```
+- **Response**:
+  - **201 Created**: Successfully registered.
+  - **400 Bad Request**: Validation error.
 
-### Service Routes
-| Method | Endpoint           | Description                     |
-|--------|--------------------|---------------------------------|
-| GET    | `/api/services`    | Get all services                |
-| GET    | `/api/services/:id`| Get a specific service by ID    |
-| POST   | `/api/services`    | Add a new service               |
-| PUT    | `/api/services/:id`| Update a service by ID          |
-| DELETE | `/api/services/:id`| Delete a service by ID          |
+#### User Login
+- **URL**: `/api/auth/login`
+- **Method**: `POST`
+- **Description**: Logs in a user.
+- **Request Body**:
+  ```json
+  {
+    "username": "string",
+    "password": "string"
+  }
+  ```
+- **Response**:
+  - **200 OK**: Successfully logged in with a JWT token.
+  - **401 Unauthorized**: Invalid credentials.
 
-### Meeting Routes
-| Method | Endpoint           | Description                     |
-|--------|--------------------|---------------------------------|
-| GET    | `/api/meetings`    | Get all meetings                |
-| GET    | `/api/meetings/:id`| Get a specific meeting by ID    |
-| POST   | `/api/meetings`    | Add a new meeting               |
-| PUT    | `/api/meetings/:id`| Update a meeting by ID          |
-| DELETE | `/api/meetings/:id`| Delete a meeting by ID          |
+### Services Routes
+
+#### Get All Services
+- **URL**: `/api/services`
+- **Method**: `GET`
+- **Description**: Fetches all services.
+
+#### Get Service by ID
+- **URL**: `/api/services/:id`
+- **Method**: `GET`
+- **Description**: Fetches a service by its ID.
+
+#### Add a New Service
+- **URL**: `/api/services`
+- **Method**: `POST`
+- **Description**: Adds a new service.
+- **Request Body**:
+  ```json
+  {
+    "name": "string",
+    "description": "string",
+    "price": "number",
+    "meetingDuration": "number"
+  }
+  ```
+
+#### Update a Service
+- **URL**: `/api/services/:id`
+- **Method**: `PUT`
+- **Description**: Updates an existing service.
+- **Request Body**: Similar to adding a new service.
+
+#### Delete a Service
+- **URL**: `/api/services/:id`
+- **Method**: `DELETE`
+- **Description**: Deletes a service by its ID.
+
+### Meetings Routes
+
+#### Add a New Meeting
+- **URL**: `/api/meetings`
+- **Method**: `POST`
+- **Description**: Adds a new meeting.
+- **Request Body**:
+  ```json
+  {
+    "name": "string",
+    "phone": "string",
+    "email": "string",
+    "meetingDuration": "Date"
+  }
+  ```
+
+#### Error Handling
+In case of any errors, the server will respond with appropriate HTTP status codes and error messages.
+
